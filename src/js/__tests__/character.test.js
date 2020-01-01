@@ -17,6 +17,5 @@ test.each([
   ['bad name', 'Willie!!!!!!!!!!', 'Swordsman', 'Incorrect name length'],
   ['bad type', 'Willie', 'Snowman', 'Incorrect type of character'],
 ])('trying to test errors', (errorCase, name, type, expected) => {
-  console.log(`Case: ${errorCase}`);
   expect(Character.bind(this, name, type)).toThrow(expected);
 });
